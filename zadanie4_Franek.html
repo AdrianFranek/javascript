@@ -1,6 +1,12 @@
 <html> 
      <head> 
-            <title> Franek 2G2</title> 
+            <title> Franek 2G2</title>
+          <script type="text/javascript"> 
+function okno_zamknij_franek()  
+{ 
+window.close() 
+} 
+</script>
       </head> 
 <body> 
 <h3>1)kiedy powstał JavaScript (podaj datę). </h3>
@@ -27,10 +33,10 @@ Tak, do tworzenia aplikacji mobilnych można użyć różnych frameworków. Przy
 <h3>9)Aplikacje responsywne to: </h3>
 Aplikacje responsywne to aplikacje lub strony internetowe, które dostosowują się do różnych rozmiarów ekranów i urządzeń. 
 <h3>10)Przepisz linie kody pod nimi wytłumaczenie jak działa ten fragment kodu </h3>
-<textarea cols="1" rows="1"><input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"> </textarea>
+<textarea cols="70" rows="1"><input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"> </textarea><br>
 Dany fragment kodu jest przyciskiem ktory jak sie kliknie wywoluje funkcje "WinOpen(' ')".
 <h3>11)Przepisz linie kody pod nimi wytłumaczenie jak działa ta ten fragment kodu </h3>
-<textarea cols="1" rows="1">window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</textarea>
+<textarea cols="70" rows="1">window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</textarea><br>
 window.open(): Jest to wbudowana funkcja przeglądarki, która służy do otwierania nowego okna przeglądarki lub nowej karty. <br>
 
  toolbar=no  wytlumaczenie: wartość yes lub no (1 lub 0): pokazuje lub ukrywa standardowy pasek narzędzi <br>
@@ -43,5 +49,7 @@ left=200  wytlumaczenie: wartosc w pikselach:            ustawia położenie okn
 
 <h3>12)Opisz następującą instrukcję window.close() </h3>
 window.close(): Jest to wbudowana funkcja przeglądarki, która służy do zamykania danego okna przeglądarki.
+<br><br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_franek()"/> 
 </body> 
 </html> 
