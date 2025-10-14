@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="color:darkblue;font-size:200%;"> 
+    <script language="JavaScript">
+      var D1bil_Franek = prompt("Podaj pierwszą liczbę A=", "");
+      var D2bil_Franek = prompt("Podaj drugą liczbę B=", "");
+
+      var a_Franek = parseFloat(D1bil_Franek);
+      var b_Franek = parseFloat(D2bil_Franek);
+
+      var c_Franek, d_Franek, e_Franek, f_Franek;
+
+      c_Franek = a_Franek * a_Franek * a_Franek;
+      d_Franek = 3 * a_Franek * a_Franek * b_Franek;
+      e_Franek = 3 * a_Franek * b_Franek * b_Franek;
+      f_Franek = b_Franek * b_Franek * b_Franek;
+
+      document.write("Wczytane liczby: A=" + a_Franek + " B=" + b_Franek + "<br>");
+      document.write("(" + a_Franek + " + " + b_Franek + ")³ = " 
+        + a_Franek + "³ + 3*(" + a_Franek + ")²*(" + b_Franek + ") + 3*(" + a_Franek + ")*(" + b_Franek + ")² + " 
+        + b_Franek + "³ = " + c_Franek + " + " + d_Franek + " + " + e_Franek + " + " + f_Franek 
+        + " = " + (c_Franek + d_Franek + e_Franek + f_Franek));
+
+      function okno_zamknij_franek()
+          {
+            window.close()
+          }
+    </script>
+  </div>
+  <input type="button" value="Zamknij okno" onclick="okno_zamknij_franek()"/>
+</body>
+</html>
