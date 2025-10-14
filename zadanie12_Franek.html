@@ -1,0 +1,26 @@
+<html>
+  <body> 
+    <div style="color:green;font-size:57px;"> 
+      <script language="JavaScript">
+        var D1_Franek = prompt("Podaj pierwszy dzień (D1):", "");
+        var G1_Franek = prompt("Podaj pierwszą godzinę (G1):", "");
+        var D2_Franek = prompt("Podaj drugi dzień (D2):", "");
+        var G2_Franek = prompt("Podaj drugą godzinę (G2):", "");
+
+        var D1 = parseFloat(D1_Franek);
+        var G1 = parseFloat(G1_Franek;
+        var D2 = parseFloat(D2_Franek);
+        var G2 = parseFloat(G2_Franek);
+
+        var sekundy = ((D1 - D2) * 24 + (G1 - G2)) * 3600;
+
+        document.write("Ilość sekund między dniami " + D1 + " i " + D2 + " oraz godzinami " + G1 + " i " + G2 + " = " + sekundy + " sekund<br>");
+
+        function okno_zamknij_franek() {
+          window.close();
+        }
+      </script>
+    </div>
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij_franek()"/>
+  </body>
+</html>
