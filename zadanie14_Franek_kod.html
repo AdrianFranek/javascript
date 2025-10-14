@@ -4,20 +4,13 @@
 <html>
   <body> 
     <div style="color:green;font-size:50px;"> 
-      <script language="JavaScript">
+      <script>
         var m_Franek = prompt("m=", "");
-        var b_Franek;
-        var c_Franek;
-        var d_Franek;
-        var e_Franek;
-
         var a_Franek = parseFloat(m_Franek);
 
-        b_Franek = a_Franek + 1;
-        c_Franek = a_Franek * (a_Franek + 1);
-
-        d_Franek = c_Franek + 1;
-        e_Franek = c_Franek * (c_Franek + 1);
+        var b_Franek = a_Franek + 2;
+        var d_Franek = a_Franek * (a_Franek + 2) + (a_Franek + 2);
+        var e_Franek = a_Franek * (a_Franek + 2) - a_Franek;
 
         document.write("1/" + a_Franek + " = 1/" + b_Franek + " + 1/" + d_Franek + " + 1/" + e_Franek + "<br>");
 
@@ -29,6 +22,7 @@
     <input type="button" value="Zamknij okno" onclick="okno_zamknij_franek()"/>
   </body>
 </html>
+
     </textarea>
   </body>
 </html>
