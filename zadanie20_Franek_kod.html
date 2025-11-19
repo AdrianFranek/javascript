@@ -1,0 +1,55 @@
+<html>
+  <body> 
+    <textarea cols="100" rows="45">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+  function AB_franek() {
+    var xa_franek = parseFloat(document.getElementById('xa').value);
+    var ya_franek = parseFloat(document.getElementById('ya').value);
+    var xb_franek = parseFloat(document.getElementById('xb').value);
+    var yb_franek = parseFloat(document.getElementById('yb').value);
+    var AB_franek = Math.sqrt(Math.pow((xb_franek - xa_franek), 2) + Math.pow((yb_franek - ya_franek), 2));
+    document.getElementById("wynik").innerHTML = "Długość boku AB = " + AB_franek.toFixed(2);
+  }
+
+  function BC_franek() {
+    var xb_franek = parseFloat(document.getElementById('xb').value);
+    var yb_franek = parseFloat(document.getElementById('yb').value);
+    var xc_franek = parseFloat(document.getElementById('xc').value);
+    var yc_franek = parseFloat(document.getElementById('yc').value);
+    var BC_franek = Math.sqrt(Math.pow((xc_franek - xb_franek), 2) + Math.pow((yc_franek - yb_franek), 2));
+    document.getElementById("wynik").innerHTML = "Długość boku BC = " + BC_franek.toFixed(2);
+  }
+
+  function AC_franek() {
+    var xa_franek = parseFloat(document.getElementById('xa').value);
+    var ya_franek = parseFloat(document.getElementById('ya').value);
+    var xc_franek = parseFloat(document.getElementById('xc').value);
+    var yc_franek = parseFloat(document.getElementById('yc').value);
+    var AC_franek = Math.sqrt(Math.pow((xc_franek - xa_franek), 2) + Math.pow((yc_franek - ya_franek), 2));
+    document.getElementById("wynik").innerHTML = "Długość boku AC = " + AC_franek.toFixed(2);
+  }
+</script>
+
+<h1>Obliczanie długości boków trójkąta – Franek</h1><br>
+
+<p>Podaj współrzędne punktów A, B, C:</p>
+A(xa, ya): <input type="text" id="xa" size="5"> <input type="text" id="ya" size="5"><br><br>
+B(xb, yb): <input type="text" id="xb" size="5"> <input type="text" id="yb" size="5"><br><br>
+C(xc, yc): <input type="text" id="xc" size="5"> <input type="text" id="yc" size="5"><br><br>
+
+<input type="button" value="Oblicz AB" onclick="AB_franek()">
+<input type="button" value="Oblicz BC" onclick="BC_franek()">
+<input type="button" value="Oblicz AC" onclick="AC_franek()"><br><br>
+
+<div id="wynik" style="color:red; font-size:30px;"></div>
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
