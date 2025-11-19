@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Obliczanie pola i obwodu prostokąta – Franek</h1>
+
+<script type="text/javascript">
+function Pole_Franek(a_Franek, b_Franek) {
+    return a_Franek * b_Franek;
+}
+
+function Obwod_Franek(a_Franek, b_Franek) {
+    return 2 * (a_Franek + b_Franek);
+}
+
+function oblicz_Franek() {
+    var a_Franek = parseFloat(document.getElementById('a_dana_Franek').value);
+    var b_Franek = parseFloat(document.getElementById('b_dana_Franek').value);
+
+    var pole = Pole_Franek(a_Franek, b_Franek);
+    var obw = Obwod_Franek(a_Franek, b_Franek);
+
+    document.getElementById('wyprowadz_pole_Franek').value = pole.toFixed(2);
+    document.getElementById('wyprowadz_obwod_Franek').value = obw.toFixed(2);
+}
+</script>
+
+<p>Podaj długości boków prostokąta:</p>
+A: <input type="text" id="a_dana_Franek" size="5"><br><br>
+B: <input type="text" id="b_dana_Franek" size="5"><br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz_Franek()"><br><br>
+
+Pole: <input type="text" id="wyprowadz_pole_Franek" size="10"><br><br>
+Obwód: <input type="text" id="wyprowadz_obwod_Franek" size="10"><br><br>
+
+</body>
+</html>
