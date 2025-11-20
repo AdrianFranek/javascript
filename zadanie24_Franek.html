@@ -7,7 +7,7 @@
 <h1>Obliczenia – Franek</h1>
 
 <script type="text/javascript">
-function wczytaj_frank() {
+function wczytaj_franek() {
     var x1_franek = parseFloat(document.getElementById('x1_dana_franek').value);
     var x2_franek = parseFloat(document.getElementById('x2_dana_franek').value);
     return {x1_franek, x2_franek};
@@ -18,8 +18,7 @@ function radiany_franek(x1_franek) {
 }
 
 function y1_franek(x1_franek) {
-    var litery = 6;
-    return 3 * Math.pow(x1_franek, litery + 2);
+    return 3 * Math.pow(x1_franek, 6/8);
 }
 
 function y2_franek(x1_rad_franek) {
@@ -27,11 +26,11 @@ function y2_franek(x1_rad_franek) {
 }
 
 function y3_franek(x1_franek, x2_franek) {
-    return Math.cbrt(Math.pow(x1_franek,5) + 2 * Math.pow(x2_franek,4) + Math.abs(x1_franek - x2_franek));
+    return Math.cbrt(Math.pow(x1_franek,5) + 2 * Math.pow(x2_franek,4) * Math.abs(x1_franek - x2_franek));
 }
 
 function oblicz_franek() {
-    var dane = wczytaj_frank();
+    var dane = wczytaj_franek();
     var x1 = dane.x1_franek;
     var x2 = dane.x2_franek;
 
