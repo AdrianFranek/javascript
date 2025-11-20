@@ -1,0 +1,69 @@
+<html>
+  <body> 
+    <textarea cols="100" rows="55">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Obliczenia – Franek</h1>
+
+<script type="text/javascript">
+function wczytaj_franek() {
+    var x1_franek = parseFloat(document.getElementById('x1_dana_franek').value);
+    var x2_franek = parseFloat(document.getElementById('x2_dana_franek').value);
+    return {x1_franek, x2_franek};
+}
+
+function radiany_franek(x1_franek) {
+    return x1_franek * Math.PI / 180;
+}
+
+function y1_franek(x1_franek) {
+    return 3 * Math.pow(x1_franek, 6/8);
+}
+
+function y2_franek(x1_rad_franek) {
+    return 2 * Math.cos(x1_rad_franek) + 3 * Math.sin(x1_rad_franek);
+}
+
+function y3_franek(x1_franek, x2_franek) {
+    return Math.cbrt(Math.pow(x1_franek,5) + 2 * Math.pow(x2_franek,4) * Math.abs(x1_franek - x2_franek));
+}
+
+function oblicz_franek() {
+    var dane = wczytaj_franek();
+    var x1 = dane.x1_franek;
+    var x2 = dane.x2_franek;
+
+    var x1_rad = radiany_franek(x1);
+    var y1 = y1_franek(x1);
+    var y2 = y2_franek(x1_rad);
+    var y3 = y3_franek(x1, x2);
+
+    document.getElementById('x1_wynik_franek').value = x1;
+    document.getElementById('x1_rad_wynik_franek').value = x1_rad.toFixed(2);
+    document.getElementById('y1_wynik_franek').value = y1.toFixed(2);
+    document.getElementById('y2_wynik_franek').value = y2.toFixed(2);
+    document.getElementById('y3_wynik_franek').value = y3.toFixed(2);
+}
+</script>
+
+<p>Wprowadź dane:</p>
+X1: <input type="text" id="x1_dana_franek" size="5"><br><br>
+X2: <input type="text" id="x2_dana_franek" size="5"><br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz_franek()"><br><br>
+
+X1: <input type="text" id="x1_wynik_franek" size="10"><br><br>
+X1 w radianach: <input type="text" id="x1_rad_wynik_franek" size="10"><br><br>
+y1: <input type="text" id="y1_wynik_franek" size="10"><br><br>
+y2: <input type="text" id="y2_wynik_franek" size="10"><br><br>
+y3: <input type="text" id="y3_wynik_franek" size="10"><br><br>
+
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
