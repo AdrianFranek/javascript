@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function Autobus(marka_a, rok_produkcji_a, ilu_pasazerow_a, kolor_a)
+{
+    this.marka = marka_a;
+    this.rok_produkcji = rok_produkcji_a;
+    this.ilu_pasazerow = ilu_pasazerow_a;
+    this.kolor = kolor_a;
+}
+
+Autobus.prototype.Autobus_wyswietl_Franek = function ()
+{
+    document.write("Marka: " + this.marka + ", Rok: " + this.rok_produkcji + ", Pasażerów: " + this.ilu_pasazerow + ", Kolor: " + this.kolor + "<br>");
+};
+
+var autobus1 = new Autobus("Solaris", 2022, 55, "Zielony");
+var autobus2 = new Autobus("Mercedes", 2019, 45, "Biały");
+var autobus3 = new Autobus("Autosan", 2010, 30, "Pomarańczowy");
+
+document.write("<h3>Wyświetlenie przez metodę z prototypu:</h3>");
+autobus1.Autobus_wyswietl_Franek();
+autobus2.Autobus_wyswietl_Franek();
+autobus3.Autobus_wyswietl_Franek();
+
+document.write("<h3>Bezpośredni dostęp do pól:</h3>");
+document.write("Autobus 1: " + autobus1.marka + " " + autobus1.rok_produkcji + " " + autobus1.ilu_pasazerow + " " + autobus1.kolor + "<br>");
+document.write("Autobus 2: " + autobus2.marka + " " + autobus2.rok_produkcji + " " + autobus2.ilu_pasazerow + " " + autobus2.kolor + "<br>");
+document.write("Autobus 3: " + autobus3.marka + " " + autobus3.rok_produkcji + " " + autobus3.ilu_pasazerow + " " + autobus3.kolor + "<br>");
+
+autobus1.przebieg = 150000;
+autobus1.Autobus_pokaz_Franek = function()
+{
+    alert("Metoda dodatkowa. Przebieg: " + this.przebieg);
+}
+
+autobus1.Autobus_pokaz_Franek();
+
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe <br>
+Obiekt: Autobus
+</body>
+</html>
