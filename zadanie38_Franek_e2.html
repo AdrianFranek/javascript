@@ -4,25 +4,43 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Franek Z38</title> 
+
     <style> 
-       #demo_franek { 
-       color: red; 
-       font-size: 40px;   
-      } 
+        #demo_franek { 
+            color: red; 
+            font-size: 40px;   
+            text-align: center;
+        } 
     </style> 
+
 </head>
- <html> 
-   <p id="demo_franek"></p> 
-            <script> 
-                var w = window.innerWidth; 
-                var h = window.innerHeight; 
-                var x = document.getElementById("demo_franek"); 
-                x.innerHTML = "szerokość przeglądarki: " + w + ", wysokość: " + h + "."; 
-           </script> 
-  <body> 
-      <div style="color: red; font-size: 1cm; text-align: center;">Franek</div><br> 
-       <div style="color: green; font-size: 12mm; text-align: center;"> Pojęcie rozdzielczość ekranu/monitora oznacza calkowita liczbe pikseli wyswietlacza </div><br> 
-       <div style="color: blue; font-size: 50px; text-align: center;"> Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza wymiary okna w ktorym widac strone</div><br> 
-   </body> 
- </html> 
-<!--  Franek Z38_JS  -->
+
+<body> 
+
+<div style="color: red; font-size: 1cm; text-align: center;">
+    Franek
+</div><br> 
+
+<div style="color: green; font-size: 12mm; text-align: center;">
+    Pojęcie rozdzielczość ekranu/monitora oznacza całkowitą liczbę pikseli,
+    które może wyświetlić ekran (np. 1920x1080).
+</div><br> 
+
+<div style="color: blue; font-size: 50px; text-align: center;">
+    Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza
+    aktualne wymiary widocznego obszaru strony internetowej w oknie przeglądarki.
+</div><br> 
+
+<p id="demo_franek"></p> 
+
+<script> 
+    var w = window.innerWidth; 
+    var h = window.innerHeight; 
+    var x = document.getElementById("demo_franek"); 
+    x.innerHTML = "szerokość przeglądarki: " + w + ", wysokość: " + h + "."; 
+</script> 
+
+</body> 
+</html> 
+
+<!-- Franek Z38_JS -->
